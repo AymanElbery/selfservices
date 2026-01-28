@@ -1,0 +1,27 @@
+<div class="flex h-screen overflow-hidden bg-gray-50 dark:bg-gray-950">
+  <!-- Sidebar -->
+  <app-sidebar></app-sidebar>
+
+  <!-- Main Content Area -->
+  <div class="flex flex-1 flex-col overflow-hidden">
+    <!-- Header -->
+    <app-header></app-header>
+
+    <!-- Main Content with router-outlet -->
+    <main
+      class="flex flex-1 flex-col overflow-y-auto transition-all duration-300"
+      [class.lg:ml-20]="!isRTL() && sidebarCollapsed()"
+      [class.lg:ml-64]="!isRTL() && !sidebarCollapsed()"
+      [class.lg:mr-20]="isRTL() && sidebarCollapsed()"
+      [class.lg:mr-64]="isRTL() && !sidebarCollapsed()"
+    >
+      <!-- Page Content -->
+      <div class="flex-1 container mx-auto px-4 py-6 sm:px-6 lg:px-8">
+        <router-outlet></router-outlet>
+      </div>
+
+      <!-- Footer - Sticky at bottom -->
+      <app-footer></app-footer>
+    </main>
+  </div>
+</div>

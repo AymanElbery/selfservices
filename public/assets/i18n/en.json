@@ -1,0 +1,94 @@
+{
+  "app": {
+    "title": "SelfServices",
+    "welcome": "Welcome to SelfServices"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "users": "Users",
+    "settings": "Settings"
+  },
+  "header": {
+    "toggleSidebar": "Toggle Sidebar",
+    "toggleTheme": "Toggle Theme",
+    "toggleLanguage": "Toggle Language",
+    "login": "Login",
+    "logout": "Logout",
+    "profile": "Profile"
+  },
+  "sidebar": {
+    "collapse": "Collapse Sidebar",
+    "expand": "Expand Sidebar"
+  },
+  "footer": {
+    "copyright": "© {{year}} SelfServices. All rights reserved.",
+    "about": "About",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "home": {
+    "title": "Welcome to SelfServices",
+    "subtitle": "Your Angular 20 application with feature-based architecture",
+    "features": {
+      "title": "Features",
+      "fast": {
+        "title": "Fast & Modern",
+        "description": "Angular 20 with Signals"
+      },
+      "secure": {
+        "title": "Secure",
+        "description": "Keycloak 26 Integration"
+      },
+      "stateManagement": {
+        "title": "State Management",
+        "description": "NgRx with Signals"
+      },
+      "featureBased": {
+        "title": "Feature-based Architecture",
+        "description": "Lazy-loaded modules for optimal performance"
+      },
+      "centralizedApi": {
+        "title": "Centralized API Service",
+        "description": "Type-safe HTTP operations with BaseApiService"
+      },
+      "tailwindLayout": {
+        "title": "TailwindCSS Layout",
+        "description": "Responsive design with RTL support"
+      },
+      "multiEnv": {
+        "title": "Multi-Environment Support",
+        "description": "Dev, staging (minusone), and production configs"
+      }
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "usersExample": "Users Example",
+      "documentation": "Documentation"
+    }
+  },
+  "users": {
+    "title": "Users",
+    "loading": "Loading users...",
+    "noUsers": "No users found",
+    "reload": "Reload Users",
+    "userNotFound": "User not found",
+    "backToList": "Back to List",
+    "name": "Name",
+    "email": "Email",
+    "id": "ID"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "update": "Update",
+    "search": "Search",
+    "filter": "Filter",
+    "close": "Close"
+  }
+}

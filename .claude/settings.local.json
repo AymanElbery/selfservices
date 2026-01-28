@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:dev:*)",
+      "Bash(npm install:*)",
+      "Bash(npx tailwindcss:*)"
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "app": {
+    "title": "الخدمات الذاتية",
+    "welcome": "مرحباً بك في الخدمات الذاتية"
+  },
+  "nav": {
+    "dashboard": "لوحة التحكم",
+    "users": "المستخدمون",
+    "settings": "الإعدادات"
+  },
+  "header": {
+    "toggleSidebar": "إظهار/إخفاء القائمة الجانبية",
+    "toggleTheme": "تبديل المظهر",
+    "toggleLanguage": "تبديل اللغة",
+    "login": "تسجيل الدخول",
+    "logout": "تسجيل الخروج",
+    "profile": "الملف الشخصي"
+  },
+  "sidebar": {
+    "collapse": "طي القائمة الجانبية",
+    "expand": "توسيع القائمة الجانبية",
+    "profile":"الملف الشخصي",
+    "salary": "راتبي"
+  },
+  "footer": {
+    "copyright": "نظام خدماتي  جميع الحقوق محفوظة",
+    "about": "حول",
+    "privacy": "الخصوصية",
+    "terms": "الشروط"
+  },
+  "home": {
+    "title": "مرحباً بك في الخدمات الذاتية",
+    "subtitle": "تطبيق Angular 20 الخاص بك مع بنية معتمدة على الميزات",
+    "features": {
+      "title": "الميزات",
+      "fast": {
+        "title": "سريع وحديث",
+        "description": "Angular 20 مع Signals"
+      },
+      "secure": {
+        "title": "آمن",
+        "description": "تكامل Keycloak 26"
+      },
+      "stateManagement": {
+        "title": "إدارة الحالة",
+        "description": "NgRx مع Signals"
+      },
+      "featureBased": {
+        "title": "بنية معتمدة على الميزات",
+        "description": "وحدات محملة بشكل كسول للأداء الأمثل"
+      },
+      "centralizedApi": {
+        "title": "خدمة API مركزية",
+        "description": "عمليات HTTP آمنة من النوع مع BaseApiService"
+      },
+      "tailwindLayout": {
+        "title": "تخطيط TailwindCSS",
+        "description": "تصميم متجاوب مع دعم RTL"
+      },
+      "multiEnv": {
+        "title": "دعم بيئات متعددة",
+        "description": "إعدادات التطوير والتجهيز والإنتاج"
+      }
+    },
+    "quickLinks": {
+      "title": "روابط سريعة",
+      "usersExample": "مثال المستخدمين",
+      "documentation": "التوثيق"
+    }
+  },
+  "users": {
+    "title": "المستخدمون",
+    "loading": "جاري تحميل المستخدمين...",
+    "noUsers": "لم يتم العثور على مستخدمين",
+    "reload": "إعادة تحميل المستخدمين",
+    "userNotFound": "المستخدم غير موجود",
+    "backToList": "العودة إلى القائمة",
+    "name": "الاسم",
+    "email": "البريد الإلكتروني",
+    "id": "المعرف"
+  },
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "success": "نجح",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "create": "إنشاء",
+    "update": "تحديث",
+    "search": "بحث",
+    "filter": "تصفية",
+    "close": "إغلاق"
+  }
+}

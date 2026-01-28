@@ -1,0 +1,21 @@
+# Environment Files - Security Recommendation
+#
+# Consider adding production environment files to .gitignore
+# if they contain sensitive information.
+#
+# Uncomment the lines below to ignore specific environment files:
+
+# Ignore all environment files except the template
+# environment.*.ts
+# !environment.ts
+# !environment.interface.ts
+
+# Or ignore only production environments
+# environment.production.ts
+# environment.minusone.ts
+
+# Note: If you ignore these files, make sure to:
+# 1. Document the required structure in README.md
+# 2. Provide example/template files
+# 3. Configure CI/CD to inject values during build
+# 4. Share sensitive values through secure channels (not Git)

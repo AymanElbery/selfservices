@@ -1,0 +1,37 @@
+/* TailwindCSS v3 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+/* You can add global styles below */
+
+/* RTL Support */
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="ltr"] {
+  direction: ltr;
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .rtl-flip {
+    transform: scaleX(-1);
+  }
+
+  .transition-sidebar {
+    transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+}
+
+@font-face {
+  font-family: 'arabic-flat-font';
+  font-weight: bold;
+  src: url('../public/assets/fonts/GE-SS-Text-Medium.otf');
+}
+
+*{
+  font-family: 'arabic-flat-font';
+}
