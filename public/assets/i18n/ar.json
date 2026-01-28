@@ -14,19 +14,25 @@
     "toggleLanguage": "تبديل اللغة",
     "login": "تسجيل الدخول",
     "logout": "تسجيل الخروج",
-    "profile": "الملف الشخصي"
+    "profile": "الملف الشخصي",
+    "support": "الدعم الفني",
+    "importantLinks": "روابط مهمة"
   },
   "sidebar": {
     "collapse": "طي القائمة الجانبية",
     "expand": "توسيع القائمة الجانبية",
-    "profile":"الملف الشخصي",
-    "salary": "راتبي"
+    "profile": "الملف الشخصي",
+    "salary": "راتبي",
+    "need_help": "هل تحتاج مساعدة؟",
+    "support_description": "تواصل مع فريق الدعم الفني",
+    "contact_support": "تواصل معنا"
   },
   "footer": {
-    "copyright": "نظام خدماتي  جميع الحقوق محفوظة",
+    "copyright": "القوات الجوية الملكية السعودية",
     "about": "حول",
     "privacy": "الخصوصية",
-    "terms": "الشروط"
+    "terms": "الشروط",
+    "my_services_version": "نظام خدماتي إصدار (٣)"
   },
   "home": {
     "title": "مرحباً بك في الخدمات الذاتية",

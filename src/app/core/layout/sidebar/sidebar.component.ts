@@ -52,11 +52,6 @@ export class SidebarComponent {
       icon: 'home',
     },
     {
-      label: 'الدعم الفني',
-      route: '/',
-      icon: 'support',
-    },
-    {
       label: 'روابط تُهمك',
       route: '/',
       icon: 'link',

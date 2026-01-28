@@ -3,27 +3,24 @@
     <div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
       <!-- Copyright -->
       <p class="text-sm text-gray-600 dark:text-gray-400">
+        {{ 'footer.my_services_version' | translate }}
+      </p>
+      <p class="text-sm text-gray-600 dark:text-gray-400">
         {{ 'footer.copyright' | translate }} © {{ currentYear }}
       </p>
 
       <!-- Links -->
       <nav class="flex gap-6">
-        <a
-          routerLink="/about"
-          class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-        >
+        <a routerLink="/about"
+          class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
           {{ 'footer.about' | translate }}
         </a>
-        <a
-          routerLink="/privacy"
-          class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-        >
+        <a routerLink="/privacy"
+          class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
           {{ 'footer.privacy' | translate }}
         </a>
-        <a
-          routerLink="/terms"
-          class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-        >
+        <a routerLink="/terms"
+          class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
           {{ 'footer.terms' | translate }}
         </a>
       </nav>
