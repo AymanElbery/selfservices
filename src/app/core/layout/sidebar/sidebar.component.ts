@@ -43,20 +43,19 @@ export class SidebarComponent {
   navItems: NavItem[] = [
     {
       label: 'الصفحة الرئيسية',
-      route: '/',
+      route: '/dashboard',
       icon: 'home',
     },
     {
       label: 'خدماتي',
-      route: '/',
-      icon: 'home',
+      route: '/users',
+      icon: 'users',
     },
     {
       label: 'روابط تُهمك',
-      route: '/',
+      route: '/links',
       icon: 'link',
     },
-    // Add more navigation items here
   ];
 
   /**

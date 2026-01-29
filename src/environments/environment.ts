@@ -9,7 +9,7 @@ import { Environment } from './environment.interface';
 
 export const environment: Environment = {
   production: false,
-  enableAuth: false, // Disable Keycloak for local development
+  enableAuth: true, // Enable Keycloak authentication
   apiUrl: 'http://localhost:3000/api',
   keycloak: {
     url: 'http://localhost:8080',

@@ -26,19 +26,38 @@ export class KeycloakService {
    * Initialize Keycloak with configuration from environment
    */
   async init(): Promise<boolean> {
+    console.log('[Keycloak] init() called');
+
     try {
+      console.log('[Keycloak] Creating Keycloak instance with config:', {
+        url: environment.keycloak.url,
+        realm: environment.keycloak.realm,
+        clientId: environment.keycloak.clientId,
+      });
+
       this.keycloakInstance = new Keycloak({
         url: environment.keycloak.url,
         realm: environment.keycloak.realm,
         clientId: environment.keycloak.clientId,
       });
 
-      const authenticated = await this.keycloakInstance.init({
+      console.log('[Keycloak] Instance created, calling init()...');
+
+      // Add timeout to prevent hanging if Keycloak server is unavailable
+      const initPromise = this.keycloakInstance.init({
         onLoad: 'check-sso',
         silentCheckSsoRedirectUri: window.location.origin + '/assets/silent-check-sso.html',
         checkLoginIframe: false,
         pkceMethod: 'S256',
       });
+
+      const timeoutPromise = new Promise<never>((_, reject) => {
+        setTimeout(() => reject(new Error('Keycloak initialization timed out after 10s')), 10000);
+      });
+
+      const authenticated = await Promise.race([initPromise, timeoutPromise]);
+
+      console.log('[Keycloak] init() completed, authenticated:', authenticated);
 
       this.isAuthenticatedSubject.next(authenticated);
 
@@ -49,18 +68,26 @@ export class KeycloakService {
 
       return authenticated;
     } catch (error) {
-      console.error('Failed to initialize Keycloak', error);
+      console.error('[Keycloak] Failed to initialize Keycloak', error);
       return false;
     }
   }
 
   /**
    * Login redirect to Keycloak
+   * Initializes Keycloak if not already initialized
    */
-  login(redirectUri?: string): Promise<void> {
+  async login(redirectUri?: string): Promise<void> {
+    // Initialize Keycloak if not already done
     if (!this.keycloakInstance) {
-      throw new Error('Keycloak not initialized');
+      await this.init();
     }
+
+    if (!this.keycloakInstance) {
+      console.error('Failed to initialize Keycloak for login');
+      return;
+    }
+
     return this.keycloakInstance.login({
       redirectUri: redirectUri || window.location.origin,
     });

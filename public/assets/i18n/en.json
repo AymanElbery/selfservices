@@ -95,5 +95,15 @@
     "search": "Search",
     "filter": "Filter",
     "close": "Close"
+  },
+  "login": {
+    "title": "Welcome Back",
+    "subtitle": "Sign in to access your account",
+    "button": "Sign in with SSO",
+    "redirecting": "Redirecting...",
+    "securedBy": "Secured by Keycloak",
+    "redirectInfo": "You will be redirected to the identity provider for authentication.",
+    "havingTrouble": "Having trouble?",
+    "contactSupport": "Contact support"
   }
 }

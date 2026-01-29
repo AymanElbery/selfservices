@@ -1,4 +1,4 @@
-import { ApplicationConfig, isDevMode, provideBrowserGlobalErrorListeners, provideZoneChangeDetection, APP_INITIALIZER, importProvidersFrom } from '@angular/core';
+import { ApplicationConfig, isDevMode, provideBrowserGlobalErrorListeners, provideZoneChangeDetection, APP_INITIALIZER, importProvidersFrom, ErrorHandler } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { provideHttpClient, withInterceptors, HttpClient } from '@angular/common/http';
 import { provideStore } from '@ngrx/store';
@@ -11,15 +11,18 @@ import { reducers } from './store/reducers';
 import { globalEffects } from './store/effects';
 import { KeycloakService, initializeKeycloak, keycloakInterceptor } from './core/auth';
 import { createTranslateLoader } from './core/config/translate-loader.factory';
+import { GlobalErrorHandler, errorInterceptor } from './core/error';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    // HTTP Client with Keycloak interceptor
+    // Global Error Handler
+    { provide: ErrorHandler, useClass: GlobalErrorHandler },
+    // HTTP Client with interceptors
     provideHttpClient(
-      withInterceptors([keycloakInterceptor])
+      withInterceptors([keycloakInterceptor, errorInterceptor])
     ),
     // ngx-translate
     importProvidersFrom(

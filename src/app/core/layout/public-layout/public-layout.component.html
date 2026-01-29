@@ -1,0 +1,83 @@
+<div
+  class="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950"
+  [attr.dir]="isRTL() ? 'rtl' : 'ltr'"
+>
+  <!-- Header with logo -->
+  <header class="py-6 px-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center">
+        <img
+          src="assets/images/logos/myservices.svg"
+          [alt]="'app.title' | translate"
+          class="h-14 w-auto"
+        />
+      </a>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-2">
+        <!-- Theme Toggle -->
+        <button
+          type="button"
+          (click)="toggleTheme()"
+          class="rounded-lg p-2.5 text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+          [title]="'header.toggleTheme' | translate"
+        >
+          @if (isDark()) {
+            <!-- Sun Icon -->
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+              />
+            </svg>
+          } @else {
+            <!-- Moon Icon -->
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+              />
+            </svg>
+          }
+        </button>
+
+        <!-- Language Toggle -->
+        <button
+          type="button"
+          (click)="toggleLanguage()"
+          class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+          [title]="'header.toggleLanguage' | translate"
+        >
+          @if ((currentLanguage$ | async) === 'en') {
+            <!-- Arabic Flag -->
+            <img src="assets/images/svg/ksa.svg" alt="العربية" class="h-5 w-7 rounded" />
+          } @else {
+            <!-- English Flag -->
+            <img src="assets/images/svg/usa.svg" alt="English" class="h-5 w-7 rounded" />
+          }
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="flex-1 flex items-center justify-center px-4 py-12">
+    <div class="w-full max-w-md">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-6 px-4">
+    <div class="max-w-7xl mx-auto text-center">
+      <p class="text-sm text-gray-500 dark:text-gray-400">
+        {{ 'footer.copyright' | translate: { year: currentYear } }}
+      </p>
+    </div>
+  </footer>
+</div>

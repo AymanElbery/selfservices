@@ -73,6 +73,9 @@
       <p class="mt-3 text-sm font-medium text-gray-900 dark:text-white text-center truncate max-w-full">
         {{ (user$ | async)?.name || 'عبدالمجيد بن عبدالله' }}
       </p>
+      <p class="text-xs text-gray-500 dark:text-gray-400">
+        {{ (user$ | async)?.preferred_username }}
+      </p>
       <!-- Quick Links -->
       <div class="mt-4 flex items-center justify-center gap-6">
         <!-- My Salary -->
@@ -102,7 +105,7 @@
     @for (item of navItems; track item.route) {
     <a [routerLink]="item.route"
       routerLinkActive="bg-primary-50 text-primary-700 dark:bg-primary-900/20 dark:text-primary-400"
-      [routerLinkActiveOptions]="{ exact: item.route === '/' }"
+      [routerLinkActiveOptions]="{ exact: item.route === '/dashboard' }"
       class="group flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white"
       [class.justify-center]="sidebarCollapsed()" [attr.title]="sidebarCollapsed() ? item.label : null"
       (click)="closeSidebar()">

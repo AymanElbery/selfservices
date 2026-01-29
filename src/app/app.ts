@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
-import { MainLayoutComponent } from './core/layout';
+import { RouterOutlet } from '@angular/router';
+import { ToastContainerComponent } from './core/notifications';
 
 @Component({
   selector: 'app-root',
-  imports: [MainLayoutComponent],
+  imports: [RouterOutlet, ToastContainerComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

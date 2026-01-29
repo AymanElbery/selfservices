@@ -1,12 +1,8 @@
 /**
  * Route Guards
  *
- * Guards for route protection (auth, permissions, etc.)
- * Examples: AuthGuard, RoleGuard, UnsavedChangesGuard
+ * Guards for route protection.
+ * Note: authGuard is exported from core/auth module.
  */
 
-// Export your guards here
-// export * from './auth.guard';
-
-// Placeholder export to make this a valid module
-export {};
+export * from './guest.guard';
